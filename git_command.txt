@@ -1,0 +1,24 @@
+﻿1) Checkout và merge source
+git checkout dev/akagane
+git fetch
+git merge origin/develop
+
+2) Lưu trữ stash
+git stash save <msg> (Lưu lại file edit)
+git stash save <msg> -u (Lưu lại file add|edit|delete)
+git stash list
+git stash show stash@{0} (Xem nội dung cụ thể)
+git stash apply stash@{0} (Apply stash nhưng KHÔNG xóa trong list stash)
+git stash pop stash@{0} (Apply stash và xóa trong list stash)
+
+3) git clone <link.git> <folder_name> --branch <branch_name>
+git branch (xem branch hiện tại)
+
+Back source xóa history
+- Tạo branch mới backup lại 
+- Backup lại các file setting trên server liên quan
+- Sử dụng lệnh reset với option hard 
+- Push thì sử dụng option unknown changes
+- Ở src cần apply back source thì sử dụng lệnh git rebase hoặc git checkout
+git rebase -i master
+
